@@ -2,11 +2,13 @@ package eleven.lms.attendrule;
 
 import eleven.lms.attend.AttendStandard;
 import eleven.lms.attend.MemberAttend;
+import org.springframework.stereotype.Component;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+@Component
 public class OneDayPolicy implements AttendPolicy{
     SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
     Date startTime = dateFormat.parse("09:00:00");

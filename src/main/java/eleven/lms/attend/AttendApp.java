@@ -1,6 +1,6 @@
 package eleven.lms.attend;
 
-import eleven.lms.AppConfig;
+import eleven.lms.AutoAppconfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -23,7 +23,7 @@ public class AttendApp {
 //        AttendService attendService = appConfig.attendService();
 //        AttendRepository attendRepository = appConfig.attendRepository();
 
-       ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AppConfig.class);
+       ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AutoAppconfig.class);
        AttendService attendService = applicationContext.getBean("attendService",AttendService.class);
        AttendRepository attendRepository = applicationContext.getBean("attendRepository",AttendRepository.class);
 
