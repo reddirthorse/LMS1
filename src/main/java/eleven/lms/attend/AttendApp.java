@@ -24,8 +24,8 @@ public class AttendApp {
 //        AttendRepository attendRepository = appConfig.attendRepository();
 
        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AutoAppconfig.class);
-       AttendService attendService = applicationContext.getBean("attendService",AttendService.class);
-       AttendRepository attendRepository = applicationContext.getBean("attendRepository",AttendRepository.class);
+       AttendService attendService = applicationContext.getBean("attendServiceImpl",AttendService.class);
+       AttendRepository attendRepository = applicationContext.getBean("memoryAttendRepository",AttendRepository.class);
 
         attendService.CreateAttend(memberAttend);
         attendRepository.save(memberAttend);
